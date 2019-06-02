@@ -1,0 +1,10 @@
+@using Templates.ViewModels
+@model HelloWorldViewModel
+
+@{
+    Layout = "_EmailLayoutText";
+    ViewContext.ViewData["EmailTitle"] = "Hello World!";
+}
+
+It looks like you may have just sent your first custom email! Let's Go to @Model.ButtonLink.
+- Derek Arends

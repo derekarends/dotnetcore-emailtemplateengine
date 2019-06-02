@@ -1,0 +1,18 @@
+@using Templates.ViewModels
+@model HelloWorldViewModel
+
+@{
+    Layout = "_EmailLayoutHtml";
+    ViewContext.ViewData["EmailTitle"] = "Hello World!";
+}
+
+<p>
+    It looks like you may have just sent your first custom email!
+</p>
+
+
+@await Html.PartialAsync("_EmailButton", new EmailButtonViewModel("Let's Go!", Model.ButtonLink))
+
+<p>
+    Derek Arends
+</p>
